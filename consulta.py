@@ -1,5 +1,6 @@
 from random import randint
 
+
 def voltaArtista():
     vetor_de_artistas = [
         "Frank Sinatra",
@@ -13,10 +14,16 @@ def voltaArtista():
         "Roberto Carlos",
         "Frank Ocean",
         "Bob Dylan",
-        "Lord Huron"
+        "Lord Huron",
+        "Marisa Monte",
+        "Nick Jonas",
+        "Joji",
+        "Trevor Daniel",
+        "Chase Atlantic"
+
     ]
 
-    gerador = randint(0, 11)
+    gerador = randint(0, 12)
     artista = vetor_de_artistas[gerador]
     str(artista)
     return artista
