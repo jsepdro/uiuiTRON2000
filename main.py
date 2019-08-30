@@ -31,7 +31,7 @@ def check_mentions(api, keywords, since_id):
             continue
         if any(keyword in tweet.text.lower() for keyword in keywords):
             logger.info(f"Tweet localizado do @{tweet.user.screen_name}")
-            if tweet.text == "@uiuiTRON2000 musi":
+            if tweet.text == "@uiuiTRON2000 mus":
                 artista = voltaArtista()
                 artist = get_artist(artista)
                 if artist:
@@ -57,9 +57,10 @@ def check_mentions(api, keywords, since_id):
             if tweet.text == "@uiuiTRON2000 hentai":
                 username_to_reply = tweet.user.screen_name
                 logger.info(f"Respondendo para {tweet.user.screen_name}")
-                reply_status = "@%s %s" % (
+                reply_status = "@%s %s %s" % (
                 username_to_reply, "o @qqfoize nao gosta de hentai, nao acredite em quem fala o contrario")
                 uiui.update_status(
+                    filename="img/00000001.jpg",
                     status=reply_status,
                     in_reply_to_status_id=tweet.id,
                 )
